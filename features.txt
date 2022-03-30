@@ -5,8 +5,8 @@ checking whether a player has won
   check if a row is full
   check if a culumn is full
   check if one of the diagonals is full
-  check if entire row is full (draw)
-  return values: 0 if player 1 won, 1 if player 2 won, 2 if it's a draw, -1 if no one has won
+  check if entire board is full (draw)
+  return values: x if player x won, O if player O won, True if it's a draw, False if no one has won
 reset function
 print board function
 clone board
