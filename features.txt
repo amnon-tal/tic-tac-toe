@@ -19,4 +19,5 @@ game management
   if a player won or the board is full, prompts restart
 
 AI player:
-each move run all games from the current board positions to eliminate all ways the opponent could win
+tree representation of a game object
+implementation of the min-max algorithm that returns an array of the best moves of each player including a list of points that goes through the current node
