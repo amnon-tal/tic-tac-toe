@@ -52,8 +52,28 @@ class Board:
         return True
 
 
-board = Board()
-board.print_board()
-board.move()
-board.move("O", 1, 1)
-board.print_board()
+class Game:
+    def __init__(self):
+        self.board = Board()
+        self.points = [0, 0]
+        self.turn = "x"
+    def gameloop(self):
+        while True:
+            while True:
+                self.play(self.turn)
+                if self.board.check_winner():
+                    if self.board.check_winner() == "x":
+                        self.points[0] += 1
+                        print("Player 1 won!")
+                    if self.board.check_winner() == "O":
+                        self.points[1] += 1
+                        print("Player 2 won!")
+                    break
+            answer = input("Do you want to keep playing? (y/n)")
+            if answer == 'n':
+                break
+    def play(self):
+        self.board.print_board()
+        coordinates = input("Please enter the two coordinates where you want to play, seperated by a comma (e.g. \"0,0\") and then press enter: ").split(",")
+       self.board.move(self.turn, coordinates[0], coordinates[1])
+       self.turn = "O" if self.turn == "x" else "x"
