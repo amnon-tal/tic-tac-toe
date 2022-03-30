@@ -1,0 +1,22 @@
+game board:
+each slot data
+functions to insert an element in each slot
+checking whether a player has won
+  check if a row is full
+  check if a culumn is full
+  check if one of the diagonals is full
+  check if entire row is full (draw)
+  return values: 0 if player 1 won, 1 if player 2 won, 2 if it's a draw, -1 if no one has won
+reset function
+print board function
+clone board
+
+game management
+  who plays
+  prompts turn
+  positions slot
+  checks for player win
+  if a player won or the board is full, prompts restart
+
+AI player:
+each move run all games from the current board positions to eliminate all ways the opponent could win
